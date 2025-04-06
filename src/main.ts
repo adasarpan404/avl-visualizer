@@ -42,6 +42,12 @@ function drawTree() {
 
   const inOrderOutput = document.getElementById("inOrderOutput")!;
   inOrderOutput.innerHTML = `<strong>Inorder:</strong> [${avl.inorder().join(", ")}]`;
+
+  const preOrderOutput = document.getElementById("preOrderOutput")!;
+  preOrderOutput.innerHTML = `<strong>Preorder:</strong> [${avl.preorder().join(", ")}]`;
+
+  const postOrderOutput = document.getElementById("postOrderOutput")!;
+  postOrderOutput.innerHTML = `<strong>Preorder:</strong> [${avl.postorder().join(", ")}]`;
 }
 
 

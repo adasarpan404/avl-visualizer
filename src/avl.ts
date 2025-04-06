@@ -127,4 +127,30 @@ export class AVLTree {
     result.push(node.value);
     this._inorder(node.right, result);
   }
+
+  preorder(): number[] {
+    const result: number[] = [];
+    this._preorder(this.root, result);
+    return result;
+  }
+
+  private _preorder(node: Node | null, result: number[]) {
+    if (!node) return;
+    result.push(node.value);
+    this._preorder(node.left, result);
+    this._preorder(node.right, result);
+  }
+
+  postorder(): number[] {
+    const result: number[] = [];
+    this._postorder(this.root, result);
+    return result;
+  }
+
+  private _postorder(node: Node | null, result: Number[]) {
+    if (!node) return;
+    this._postorder(node.left, result);
+    this._postorder(node.right, result);
+    result.push(node.value);
+  }
 }
