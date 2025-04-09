@@ -47,7 +47,7 @@ function drawTree() {
   preOrderOutput.innerHTML = `<strong>Preorder:</strong> [${avl.preorder().join(", ")}]`;
 
   const postOrderOutput = document.getElementById("postOrderOutput")!;
-  postOrderOutput.innerHTML = `<strong>Preorder:</strong> [${avl.postorder().join(", ")}]`;
+  postOrderOutput.innerHTML = `<strong>Postorder:</strong> [${avl.postorder().join(", ")}]`;
 }
 
 
