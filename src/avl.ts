@@ -153,4 +153,17 @@ export class AVLTree {
     this._postorder(node.right, result);
     result.push(node.value);
   }
+
+  searchPath(value: number): Node[] {
+    const path: Node[] = [];
+    let current = this.root;
+    while (current) {
+      path.push(current);
+      if (value === current.value) break;
+      current = value < current.value ? current.left : current.right;
+    }
+    return path;
+  }
+
+
 }
